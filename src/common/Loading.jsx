@@ -5,8 +5,8 @@ export default function Loading() {
             <Container className="d-flex flex-column justify-content-center align-items-center">
                 <Row className="text-center mt-5">
                     <Col>
-                        {/* <h1 className="mb-4">Загрузка...</h1> */}
                         <Spinner animation="border" variant="primary" />
+                        <p className="mt-4">Скоро всё загрузится…</p>
                     </Col>
                 </Row>
             </Container>
