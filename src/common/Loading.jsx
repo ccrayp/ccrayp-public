@@ -6,7 +6,7 @@ export default function Loading() {
                 <Row className="text-center mt-5">
                     <Col>
                         <Spinner animation="border" variant="primary" />
-                        <p className="mt-4">Скоро всё загрузится…</p>
+                        <p className="mt-4">Скоро всё загрузится…<br/>Максимальное время ожидания <strong>1 минута</strong></p>
                     </Col>
                 </Row>
             </Container>
