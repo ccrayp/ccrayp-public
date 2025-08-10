@@ -7,8 +7,14 @@ export async function getData({ tableName, setData, setIsLoading, needSort = tru
                 'Content-Type': 'application/json'
             }
         })
-        const data = await response.json()
-        setData(Array.isArray(data) ? (needSort ? data.sort((a, b) => b.id - a.id) : data) : [])
+        
+        const data = await response.json();
+
+        let filteredData = Array.isArray(data) ? data.filter(item => item.mode) : [];
+        if (needSort) 
+            filteredData.sort((a, b) => b.id - a.id);
+        setData(filteredData);
+
     } catch (error) {
         console.error("Ошибка загрузки технологий:", error)
         setData([])
